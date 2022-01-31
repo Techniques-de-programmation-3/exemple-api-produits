@@ -3,6 +3,8 @@ include_once '../include/config.php';
 
 header('Content-Type: application/json;');
 header('Access-Control-Allow-Origin: *'); 
+header("Access-Control-Allow-Methods: POST, DELETE, PUT, OPTIONS"); 
+header('Access-Control-Allow-Headers: Content-Type'); 
 
 $mysqli = new mysqli($host, $username, $password, $database); // Établissement de la connexion à la base de données
 if ($mysqli -> connect_errno) { // Affichage d'une erreur si la connexion échoue
